@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel · WanderPath</title>
+<meta name="description" content="WanderPath admin dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0" data-protected="true" data-admin-only="true">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="dash-shell">
+  <div class="container dash-header">
+    <h1>Admin Panel</h1>
+    <p>Users, bookings and login activity across WanderPath.</p>
+  </div>
+
+  <div class="container dash-grid">
+    <nav class="dash-nav">
+      <a href="admin.html" class="active">Overview</a>
+      <a href="#users" data-tab-link="users">Users</a>
+      <a href="#activity" data-tab-link="activity">Login Activity</a>
+      <a href="#bookings" data-tab-link="bookings">Bookings</a>
+      <a href="dashboard.html">My Dashboard</a>
+      <button class="logout-btn" data-logout>Logout</button>
+    </nav>
+
+    <div>
+      <div class="stat-mini-grid">
+        <div class="stat-mini"><div class="num" id="stat-total-users">0</div><div class="lbl">Total Registered Users</div></div>
+        <div class="stat-mini"><div class="num" id="stat-new-users">0</div><div class="lbl">New Users (30 days)</div></div>
+        <div class="stat-mini"><div class="num" id="stat-logins">0</div><div class="lbl">Total Successful Logins</div></div>
+        <div class="stat-mini"><div class="num" id="stat-bookings">0</div><div class="lbl">Active Bookings</div></div>
+      </div>
+
+      <div class="dash-card">
+        <h2>Popular Tours</h2>
+        <p class="card-sub">Ranked by number of bookings.</p>
+        <div id="popular-list"><div class="empty-state">Loading…</div></div>
+      </div>
+
+      <div class="dash-card" id="users">
+        <h2>Registered Users</h2>
+        <p class="card-sub">Account status and role management. Passwords are never shown.</p>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="users-table">
+            <thead>
+              <tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Created</th><th>Last Login</th><th>Actions</th></tr>
+            </thead>
+            <tbody><tr><td colspan="7">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dash-card" id="activity">
+        <h2>Recent Login Activity</h2>
+        <p class="card-sub">The last 15 login attempts across all accounts.</p>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="activity-table">
+            <thead>
+              <tr><th>Email</th><th>Status</th><th>Time</th><th>Device</th></tr>
+            </thead>
+            <tbody><tr><td colspan="4">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dash-card" id="bookings">
+        <h2>All Bookings</h2>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="bookings-table">
+            <thead>
+              <tr><th>Tour</th><th>Travel Date</th><th>Travelers</th><th>Status</th><th>Booked</th></tr>
+            </thead>
+            <tbody><tr><td colspan="5">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>
+
+<script>
+function esc(s){ const d=document.createElement('div'); d.textContent = s==null?'':String(s); return d.innerHTML; }
+
+document.addEventListener('wp-auth-ready', async (e) => {
+  const user = e.detail.user;
+  if (!user || user.role !== 'admin') return;
+
+  try {
+    const stats = await WP_AUTH.api('/admin/stats');
+    document.getElementById('stat-total-users').textContent = stats.totalUsers;
+    document.getElementById('stat-new-users').textContent = stats.newUsers;
+    document.getElementById('stat-logins').textContent = stats.successfulLogins;
+    document.getElementById('stat-bookings').textContent = stats.activeBookings;
+
+    const popular = document.getElementById('popular-list');
+    popular.innerHTML = stats.popularBookings.length
+      ? stats.popularBookings.map(p => `<div class="item-row"><div class="title">${esc(p.title)}</div><div class="meta">${p.count} booking${p.count===1?'':'s'}</div></div>`).join('')
+      : '<div class="empty-state">No bookings yet.</div>';
+
+    const activityBody = document.querySelector('#activity-table tbody');
+    activityBody.innerHTML = stats.recentActivity.map(a => `
+      <tr>
+        <td>${esc(a.email)}</td>
+        <td><span class="badge ${a.status}">${esc(a.status)}</span></td>
+        <td>${new Date(a.loginTime).toLocaleString()}</td>
+        <td>${esc((a.userAgent || '').slice(0, 40))}</td>
+      </tr>
+    `).join('') || '<tr><td colspan="4">No activity yet.</td></tr>';
+  } catch (err) { console.error(err); }
+
+  async function loadUsers() {
+    const { users } = await WP_AUTH.api('/admin/users');
+    const body = document.querySelector('#users-table tbody');
+    body.innerHTML = users.map(u => `
+      <tr>
+        <td>${esc(u.name)}</td>
+        <td>${esc(u.email)}</td>
+        <td><span class="badge ${u.role}">${u.role}</span></td>
+        <td><span class="badge ${u.status}">${u.status}</span></td>
+        <td>${new Date(u.createdAt).toLocaleDateString()}</td>
+        <td>${u.lastLoginAt ? new Date(u.lastLoginAt).toLocaleDateString() : '—'}</td>
+        <td>
+          <button class="btn btn-ghost btn-sm" data-toggle-status="${u.id}" data-current="${u.status}">
+            ${u.status === 'active' ? 'Disable' : 'Enable'}
+          </button>
+        </td>
+      </tr>
+    `).join('') || '<tr><td colspan="7">No users yet.</td></tr>';
+
+    body.querySelectorAll('[data-toggle-status]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = btn.dataset.toggleStatus;
+        const next = btn.dataset.current === 'active' ? 'disabled' : 'active';
+        try {
+          await WP_AUTH.api(`/admin/users/${id}/status`, { method: 'PUT', body: { status: next } });
+          WP_AUTH.toast('User status updated.');
+          loadUsers();
+        } catch (err) { WP_AUTH.toast(err.message, 'error'); }
+      });
+    });
+  }
+  loadUsers().catch(console.error);
+
+  try {
+    const { bookings } = await WP_AUTH.api('/admin/bookings');
+    const body = document.querySelector('#bookings-table tbody');
+    body.innerHTML = bookings.map(b => `
+      <tr>
+        <td>${esc(b.tourTitle)}</td>
+        <td>${esc(b.travelDate)}</td>
+        <td>${esc(b.travelers)}</td>
+        <td><span class="badge ${b.status === 'confirmed' ? 'success' : 'failed'}">${esc(b.status)}</span></td>
+        <td>${new Date(b.createdAt).toLocaleDateString()}</td>
+      </tr>
+    `).join('') || '<tr><td colspan="5">No bookings yet.</td></tr>';
+  } catch (err) { console.error(err); }
+});
+</script>

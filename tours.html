@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Packages · WanderPath</title>
+<meta name="description" content="15+ fixed-itinerary tour packages across Pakistan and international destinations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="active">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-bg" style="background-image:url('assets/images/tour-hunza-5-day-adventure-hero.jpg'); background-position:center"></div>
+  <div class="hero-scrim"></div>
+  <div class="page-hero-content container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Tours</span></div>
+    <h1>Tour Packages</h1>
+    <p class="hero-sub">15 fixed itineraries, fully planned.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filters reveal">
+      <select id="f-dest">
+        <option value="all">All Destinations</option>
+        <option value="hunza">Hunza Valley</option><option value="skardu">Skardu</option><option value="swat">Swat Valley</option><option value="murree">Murree</option><option value="naran">Naran Kaghan</option><option value="neelum-kashmir">Neelum Valley</option><option value="fairy-meadows">Fairy Meadows</option><option value="kumrat">Kumrat Valley</option><option value="dubai">Dubai</option><option value="istanbul">Istanbul</option><option value="maldives">Maldives</option><option value="malaysia">Malaysia</option><option value="bali">Bali</option><option value="thailand">Thailand</option>
+      </select>
+      <select id="f-cat">
+        <option value="all">All Categories</option>
+        <option value="Mountain Adventures">Mountain Adventures</option><option value="Camping">Camping</option><option value="Beach & Islands">Beach & Islands</option><option value="City Breaks">City Breaks</option><option value="Cultural Heritage">Cultural Heritage</option><option value="Honeymoon">Honeymoon</option>
+      </select>
+      <select id="f-price">
+        <option value="all">Any Price</option>
+        <option value="0-40000">Under PKR 40,000</option>
+        <option value="40000-100000">PKR 40,000 – 100,000</option>
+        <option value="100000-999999">PKR 100,000+</option>
+      </select>
+      <select id="f-days">
+        <option value="all">Any Duration</option>
+        <option value="0-3">1–3 Days</option>
+        <option value="4-6">4–6 Days</option>
+        <option value="7-99">7+ Days</option>
+      </select>
+      <span class="count" id="f-count">15 tours</span>
+    </div>
+
+    <div class="grid grid-3" id="tour-grid">
+      
+<a href="tours/hunza-5-day-adventure.html" class="card reveal" data-category="Mountain Adventures" data-dest="hunza" data-price="48000">
+  <div class="card-media">
+    <img src="assets/images/tour-hunza-5-day-adventure-1.jpg" alt="Hunza Valley 5-Day Adventure" loading="lazy">
+    <span class="card-badge">5 Days</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Mountain Adventures</span>
+    <h3 class="card-title">Hunza Valley 5-Day Adventure</h3>
+    <p class="card-desc">Five days through Karimabad's forts, Attabad's turquoise water and the Khunjerab border with China — the essential Hunza loop.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 48,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/skardu-lakes-forts.html" class="card reveal" data-category="Mountain Adventures" data-dest="skardu" data-price="55000">
+  <div class="card-media">
+    <img src="assets/images/tour-skardu-lakes-forts-1.jpg" alt="Skardu Lakes & Forts" loading="lazy">
+    <span class="card-badge">5 Days</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Mountain Adventures</span>
+    <h3 class="card-title">Skardu Lakes & Forts</h3>
+    <p class="card-desc">Shangrila's mirror lake, Deosai's rolling plains and Shigar's old fort — Skardu's essential sights in five relaxed days.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 55,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/swat-kalam-getaway.html" class="card reveal" data-category="Mountain Adventures" data-dest="swat" data-price="32000">
+  <div class="card-media">
+    <img src="assets/images/tour-swat-kalam-getaway-1.jpg" alt="Swat & Kalam Getaway" loading="lazy">
+    <span class="card-badge">4 Days</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Mountain Adventures</span>
+    <h3 class="card-title">Swat & Kalam Getaway</h3>
+    <p class="card-desc">Malam Jabba's chairlift, Kalam's pine forest and Mahodand's alpine lake in one easy long weekend.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 32,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/murree-weekend-escape.html" class="card reveal" data-category="City Breaks" data-dest="murree" data-price="16000">
+  <div class="card-media">
+    <img src="assets/images/tour-murree-weekend-escape-1.jpg" alt="Murree Weekend Escape" loading="lazy">
+    <span class="card-badge">2 Days</span>
+    <span class="card-rating">★ 4.4</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">City Breaks</span>
+    <h3 class="card-title">Murree Weekend Escape</h3>
+    <p class="card-desc">A quick two-day pine-forest reset — Mall Road, the Patriata chairlift and a night by the fireplace.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 16,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/naran-kaghan-jeep-safari.html" class="card reveal" data-category="Mountain Adventures" data-dest="naran" data-price="39000">
+  <div class="card-media">
+    <img src="assets/images/tour-naran-kaghan-jeep-safari-1.jpg" alt="Naran Kaghan Jeep Safari" loading="lazy">
+    <span class="card-badge">4 Days</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Mountain Adventures</span>
+    <h3 class="card-title">Naran Kaghan Jeep Safari</h3>
+    <p class="card-desc">Lake Saif-ul-Malook at sunrise, Babusar Top's high pass and Shogran's pine meadows.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 39,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/neelum-valley-explorer.html" class="card reveal" data-category="Cultural Heritage" data-dest="neelum-kashmir" data-price="37000">
+  <div class="card-media">
+    <img src="assets/images/tour-neelum-valley-explorer-1.jpg" alt="Neelum Valley Explorer" loading="lazy">
+    <span class="card-badge">4 Days</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Cultural Heritage</span>
+    <h3 class="card-title">Neelum Valley Explorer</h3>
+    <p class="card-desc">Arang Kel's alpine meadow, Sharda's ancient ruins and the emerald Neelum River road.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 37,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/fairy-meadows-trek.html" class="card reveal" data-category="Mountain Adventures" data-dest="fairy-meadows" data-price="44000">
+  <div class="card-media">
+    <img src="assets/images/tour-fairy-meadows-trek-1.jpg" alt="Fairy Meadows Trek" loading="lazy">
+    <span class="card-badge">3 Days</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Mountain Adventures</span>
+    <h3 class="card-title">Fairy Meadows Trek</h3>
+    <p class="card-desc">A jeep-and-trek expedition to Nanga Parbat's Base Camp lawn, camping under the Rupal Face.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 44,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/kumrat-forest-camping.html" class="card reveal" data-category="Camping" data-dest="kumrat" data-price="33000">
+  <div class="card-media">
+    <img src="assets/images/tour-kumrat-forest-camping-1.jpg" alt="Kumrat Forest Camping" loading="lazy">
+    <span class="card-badge">3 Days</span>
+    <span class="card-rating">★ 4.6</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Camping</span>
+    <h3 class="card-title">Kumrat Forest Camping</h3>
+    <p class="card-desc">Pine-forest camping, a trek to Katora Lake and horse-riding to Jahaz Banda meadow.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 33,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/dubai-city-highlights.html" class="card reveal" data-category="City Breaks" data-dest="dubai" data-price="115000">
+  <div class="card-media">
+    <img src="assets/images/tour-dubai-city-highlights-1.jpg" alt="Dubai City Highlights" loading="lazy">
+    <span class="card-badge">5 Days</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">City Breaks</span>
+    <h3 class="card-title">Dubai City Highlights</h3>
+    <p class="card-desc">Burj Khalifa, a desert safari and a full day exploring Old Dubai's souks and creek.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 115,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/istanbul-heritage-tour.html" class="card reveal" data-category="Cultural Heritage" data-dest="istanbul" data-price="128000">
+  <div class="card-media">
+    <img src="assets/images/tour-istanbul-heritage-tour-1.jpg" alt="Istanbul Heritage Tour" loading="lazy">
+    <span class="card-badge">6 Days</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Cultural Heritage</span>
+    <h3 class="card-title">Istanbul Heritage Tour</h3>
+    <p class="card-desc">Hagia Sophia, Topkapi Palace and a Bosphorus sunset cruise across six unhurried days.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 128,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/maldives-honeymoon-escape.html" class="card reveal" data-category="Honeymoon" data-dest="maldives" data-price="295000">
+  <div class="card-media">
+    <img src="assets/images/maldives-hero.jpg" alt="Maldives Honeymoon Escape" loading="lazy">
+    <span class="card-badge">4 Days</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Honeymoon</span>
+    <h3 class="card-title">Maldives Honeymoon Escape</h3>
+    <p class="card-desc">An overwater-villa honeymoon package with private dining, reef snorkeling and a sandbank picnic.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 295,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/malaysia-city-islands.html" class="card reveal" data-category="City Breaks" data-dest="malaysia" data-price="148000">
+  <div class="card-media">
+    <img src="assets/images/tour-malaysia-city-islands-1.jpg" alt="Malaysia City & Islands" loading="lazy">
+    <span class="card-badge">6 Days</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">City Breaks</span>
+    <h3 class="card-title">Malaysia City & Islands</h3>
+    <p class="card-desc">Kuala Lumpur's towers, Penang's street food and Langkawi's beaches across six days.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 148,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/bali-island-retreat.html" class="card reveal" data-category="Beach & Islands" data-dest="bali" data-price="158000">
+  <div class="card-media">
+    <img src="assets/images/tour-bali-island-retreat-1.jpg" alt="Bali Island Retreat" loading="lazy">
+    <span class="card-badge">6 Days</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Beach & Islands</span>
+    <h3 class="card-title">Bali Island Retreat</h3>
+    <p class="card-desc">Rice terraces, temple sunsets and surf lessons — a well-paced first-timer's Bali loop.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 158,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/thailand-beach-culture.html" class="card reveal" data-category="Beach & Islands" data-dest="thailand" data-price="138000">
+  <div class="card-media">
+    <img src="assets/images/tour-thailand-beach-culture-1.jpg" alt="Thailand Beach & Culture" loading="lazy">
+    <span class="card-badge">6 Days</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Beach & Islands</span>
+    <h3 class="card-title">Thailand Beach & Culture</h3>
+    <p class="card-desc">Bangkok's temples and markets followed by island time in Phuket or Krabi.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 138,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/northern-pakistan-grand-tour.html" class="card reveal" data-category="Mountain Adventures" data-dest="hunza" data-price="98000">
+  <div class="card-media">
+    <img src="assets/images/tour-northern-pakistan-grand-tour-1.jpg" alt="Northern Pakistan Grand Tour" loading="lazy">
+    <span class="card-badge">12 Days</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Mountain Adventures</span>
+    <h3 class="card-title">Northern Pakistan Grand Tour</h3>
+    <p class="card-desc">The ultimate loop — Naran, Hunza and Skardu back to back for travelers who want it all in one trip.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 98,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+    </div>
+    <p id="f-empty" style="display:none;text-align:center;color:var(--ink-soft);padding:60px 0">No tours match those filters.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  const destSel = document.getElementById('f-dest');
+  const catSel = document.getElementById('f-cat');
+  const priceSel = document.getElementById('f-price');
+  const daysSel = document.getElementById('f-days');
+  const cards = Array.from(document.querySelectorAll('#tour-grid .card'));
+  const count = document.getElementById('f-count');
+  const empty = document.getElementById('f-empty');
+
+  function apply(){
+    let visible = 0;
+    const dest = destSel.value, cat = catSel.value, price = priceSel.value, days = daysSel.value;
+    const [pMin,pMax] = price==='all' ? [0,Infinity] : price.split('-').map(Number);
+    cards.forEach(c => {
+      const cDest = c.dataset.dest, cCat = c.dataset.category, cPrice = Number(c.dataset.price);
+      const badge = c.querySelector('.card-badge').textContent;
+      const cDays = parseInt(badge) || 0;
+      let ok = true;
+      if (dest !== 'all' && cDest !== dest) ok = false;
+      if (cat !== 'all' && cCat !== cat) ok = false;
+      if (cPrice < pMin || cPrice > pMax) ok = false;
+      if (days !== 'all') {
+        const [dMin,dMax] = days.split('-').map(Number);
+        if (cDays < dMin || cDays > dMax) ok = false;
+      }
+      c.style.display = ok ? '' : 'none';
+      if (ok) visible++;
+    });
+    count.textContent = visible + (visible===1 ? ' tour' : ' tours');
+    empty.style.display = visible === 0 ? 'block' : 'none';
+  }
+  [destSel,catSel,priceSel,daysSel].forEach(s => s.addEventListener('change', apply));
+})();
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>

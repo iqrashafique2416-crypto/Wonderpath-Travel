@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WanderPath — Travel Beyond the Map · WanderPath</title>
+<meta name="description" content="Curated tours across Pakistan's northern valleys and the world's best islands — Hunza, Skardu, Maldives, Istanbul and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0">
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="active">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-slides"><div class="hero-slide" data-caption="Hunza Valley" style="background-image:url('assets/images/hunza-hero.jpg')"></div><div class="hero-slide" data-caption="Dubai" style="background-image:url('assets/images/dubai-hero.jpg')"></div><div class="hero-slide" data-caption="Maldives" style="background-image:url('assets/images/maldives-hero.jpg')"></div><div class="hero-slide" data-caption="Istanbul" style="background-image:url('assets/images/istanbul-hero.jpg')"></div><div class="hero-slide" data-caption="Skardu" style="background-image:url('assets/images/skardu-16.jpg')"></div></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-dots" role="tablist"><button type="button" class="hero-dot" aria-label="Show Hunza Valley"></button><button type="button" class="hero-dot" aria-label="Show Dubai"></button><button type="button" class="hero-dot" aria-label="Show Maldives"></button><button type="button" class="hero-dot" aria-label="Show Istanbul"></button><button type="button" class="hero-dot" aria-label="Show Skardu"></button></div>
+  <div class="hero-caption"></div>
+  
+<svg class="route-line" viewBox="0 0 1440 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M -50 650 C 250 500, 350 750, 620 600 S 1000 350, 1250 480 S 1500 250, 1600 300"/>
+  <circle class="route-dot" cx="620" cy="600" r="5"/>
+  <circle class="route-dot" cx="1250" cy="480" r="5"/>
+</svg>
+
+  <div class="hero-content container">
+    <span class="eyebrow" style="color:var(--blue-light)">Northern Pakistan &amp; Beyond</span>
+    <h1>Every road leads<br>somewhere <em>worth</em> the drive.</h1>
+    <p class="hero-sub">From Hunza's apricot orchards to overwater villas in the Maldives — we plan the route, the stays and the permits, so you just show up and look around.</p>
+    <div class="hero-cta">
+      <a href="tours.html" class="btn btn-gold">Browse Tour Packages</a>
+      <a href="destinations.html" class="btn btn-outline">Explore Destinations</a>
+    </div>
+
+    <div class="search-card reveal">
+      <div class="search-field">
+        <label for="s-dest">Destination</label>
+        <select id="s-dest">
+          <option>Where do you want to go?</option>
+          <option>Hunza Valley</option><option>Skardu</option><option>Swat Valley</option><option>Murree</option><option>Naran Kaghan</option><option>Neelum Valley</option><option>Fairy Meadows</option><option>Kumrat Valley</option><option>Dubai</option><option>Istanbul</option><option>Maldives</option><option>Malaysia</option><option>Bali</option><option>Thailand</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label for="s-when">When</label>
+        <input id="s-when" type="month" value="2026-10">
+      </div>
+      <div class="search-field">
+        <label for="s-people">Travelers</label>
+        <select id="s-people">
+          <option>2 Adults</option><option>1 Adult</option><option>Family (4)</option><option>Group (6+)</option>
+        </select>
+      </div>
+      <div class="search-field" style="justify-content:flex-end">
+        <a href="tours.html" class="btn btn-navy btn-block">Search Trips</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="background:linear-gradient(120deg, var(--blue-light) 0%, var(--purple) 100%); padding:64px 0">
+  <div class="container">
+    <div class="grid grid-4">
+      
+<div class="stat reveal">
+  <div class="counter-num" data-target="52000" data-suffix="+" data-decimals="0">0+</div>
+  <div class="lbl">Happy Travelers</div>
+</div>
+
+      
+<div class="stat reveal">
+  <div class="counter-num" data-target="120" data-suffix="+" data-decimals="0">0+</div>
+  <div class="lbl">Destinations Covered</div>
+</div>
+
+      
+<div class="stat reveal">
+  <div class="counter-num" data-target="15" data-suffix="+" data-decimals="0">0+</div>
+  <div class="lbl">Years Experience</div>
+</div>
+
+      
+<div class="stat reveal">
+  <div class="counter-num" data-target="4.9" data-suffix="/5" data-decimals="1">0/5</div>
+  <div class="lbl">Average Rating</div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Popular Destinations</span><h2>Where most travelers start</h2></div>
+      <p>The six routes our travelers book first.</p>
+    </div>
+    <div class="grid grid-3">
+      
+<a href="destinations/hunza.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/hunza-hero.jpg" alt="Hunza Valley" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Gilgit-Baltistan</span>
+    <h3 class="card-title">Hunza Valley</h3>
+    <p class="card-desc">Where the Karakoram touches the sky</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 45,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/skardu.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/skardu-16.jpg" alt="Skardu" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Gilgit-Baltistan</span>
+    <h3 class="card-title">Skardu</h3>
+    <p class="card-desc">Base camp for the roof of the world</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 52,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/swat.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/swat-hero.jpg" alt="Swat Valley" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Khyber Pakhtunkhwa</span>
+    <h3 class="card-title">Swat Valley</h3>
+    <p class="card-desc">Switzerland of the East</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 32,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/dubai.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/dubai-hero.jpg" alt="Dubai" loading="lazy">
+    <span class="card-badge">UAE</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Middle East</span>
+    <h3 class="card-title">Dubai</h3>
+    <p class="card-desc">Desert skyline, endless ambition</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 110,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/istanbul.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/istanbul-hero.jpg" alt="Istanbul" loading="lazy">
+    <span class="card-badge">Turkey</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Marmara</span>
+    <h3 class="card-title">Istanbul</h3>
+    <p class="card-desc">Two continents, one skyline</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 125,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/maldives.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/maldives-hero.jpg" alt="Maldives" loading="lazy">
+    <span class="card-badge">Maldives</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Indian Ocean</span>
+    <h3 class="card-title">Maldives</h3>
+    <p class="card-desc">Overwater villas, reef-blue water</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 280,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+    </div>
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="destinations.html" class="btn btn-ghost">View All 14 Destinations →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Featured Packages</span><h2>Fully planned, ready to book</h2></div>
+      <p>Hotels, transport and permits already sorted.</p>
+    </div>
+    <div class="grid grid-3">
+      
+<a href="tours/hunza-5-day-adventure.html" class="card reveal" data-category="Mountain Adventures" data-dest="hunza" data-price="48000">
+  <div class="card-media">
+    <img src="assets/images/tour-hunza-5-day-adventure-1.jpg" alt="Hunza Valley 5-Day Adventure" loading="lazy">
+    <span class="card-badge">5 Days</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Mountain Adventures</span>
+    <h3 class="card-title">Hunza Valley 5-Day Adventure</h3>
+    <p class="card-desc">Five days through Karimabad's forts, Attabad's turquoise water and the Khunjerab border with China — the essential Hunza loop.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 48,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/istanbul-heritage-tour.html" class="card reveal" data-category="Cultural Heritage" data-dest="istanbul" data-price="128000">
+  <div class="card-media">
+    <img src="assets/images/tour-istanbul-heritage-tour-1.jpg" alt="Istanbul Heritage Tour" loading="lazy">
+    <span class="card-badge">6 Days</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Cultural Heritage</span>
+    <h3 class="card-title">Istanbul Heritage Tour</h3>
+    <p class="card-desc">Hagia Sophia, Topkapi Palace and a Bosphorus sunset cruise across six unhurried days.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 128,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="tours/maldives-honeymoon-escape.html" class="card reveal" data-category="Honeymoon" data-dest="maldives" data-price="295000">
+  <div class="card-media">
+    <img src="assets/images/maldives-hero.jpg" alt="Maldives Honeymoon Escape" loading="lazy">
+    <span class="card-badge">4 Days</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Honeymoon</span>
+    <h3 class="card-title">Maldives Honeymoon Escape</h3>
+    <p class="card-desc">An overwater-villa honeymoon package with private dining, reef snorkeling and a sandbank picnic.</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 295,000</div><div class="lbl">per person</div></div>
+      <span class="card-link">View Details <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+</div>
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="tours.html" class="btn btn-navy">See All 15 Tour Packages →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Travel Experiences</span><h2>Pick your kind of trip</h2></div>
+      <p>Seven experience types, all bookable today.</p>
+    </div>
+    <div class="grid grid-3">
+      
+      <a href="experiences.html#mountain" class="feature reveal" style="background:var(--blue-light);padding:26px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff;font-size:24px">🏔</div>
+        <h3 style="font-size:17px">Mountain Adventures</h3>
+      </a>
+      <a href="experiences.html#camping" class="feature reveal" style="background:var(--blue-light);padding:26px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff;font-size:24px">🏕</div>
+        <h3 style="font-size:17px">Camping</h3>
+      </a>
+      <a href="experiences.html#hiking" class="feature reveal" style="background:var(--blue-light);padding:26px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff;font-size:24px">🥾</div>
+        <h3 style="font-size:17px">Hiking & Trekking</h3>
+      </a>
+      <a href="experiences.html#beach" class="feature reveal" style="background:var(--blue-light);padding:26px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff;font-size:24px">🏖</div>
+        <h3 style="font-size:17px">Beach Trips</h3>
+      </a>
+      <a href="experiences.html#cultural" class="feature reveal" style="background:var(--blue-light);padding:26px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff;font-size:24px">🏛</div>
+        <h3 style="font-size:17px">Cultural Tours</h3>
+      </a>
+      <a href="experiences.html#food" class="feature reveal" style="background:var(--blue-light);padding:26px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff;font-size:24px">🍴</div>
+        <h3 style="font-size:17px">Food Experiences</h3>
+      </a>
+      
+    </div>
+    <div style="text-align:center;margin-top:48px" class="reveal"><a href="experiences.html" class="btn btn-ghost">See all 7 experiences &rarr;</a></div>
+  </div>
+</section>
+
+<section class="section section-navy">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Why Choose Us</span><h2 style="color:#fff">Trip planning, minus the guesswork</h2></div>
+      <p>1,200+ groups on the road since 2016.</p>
+    </div>
+    <div class="grid grid-4" style="margin-bottom:64px">
+      
+      <div class="feature reveal">
+        <div class="feature-icon" style="font-size:24px">🧭</div>
+        <h3 style="color:#fff">Local Ground Experts</h3>
+        <p style="color:rgba(255,255,255,.72)">Guides who grew up on these roads — not a call center reading a script.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon" style="font-size:24px"></div>
+        <h3 style="color:#fff">Small-Group Comfort</h3>
+        <p style="color:rgba(255,255,255,.72)">Private 4x4s and capped group sizes, always.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon" style="font-size:24px">💳</div>
+        <h3 style="color:#fff">Transparent Pricing</h3>
+        <p style="color:rgba(255,255,255,.72)">No surprise permit or fuel add-ons, ever.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon" style="font-size:24px">📞</div>
+        <h3 style="color:#fff">24/7 Trip Support</h3>
+        <p style="color:rgba(255,255,255,.72)">A real phone number for every group, every day.</p>
+      </div>
+    </div>
+    <div class="grid grid-4">
+      
+<div class="stat reveal">
+  <div class="counter-num" data-target="1200" data-suffix="+" data-decimals="0">0+</div>
+  <div class="lbl">Trips Completed</div>
+</div>
+
+      
+<div class="stat reveal">
+  <div class="counter-num" data-target="14" data-suffix="+" data-decimals="0">0+</div>
+  <div class="lbl">Destinations</div>
+</div>
+
+      
+<div class="stat reveal">
+  <div class="counter-num" data-target="4.8" data-suffix="/5" data-decimals="1">0/5</div>
+  <div class="lbl">Average Rating</div>
+</div>
+
+      <div class="stat reveal"><div class="counter-num">24/7</div><div class="lbl">On-Trip Support</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Popular Activities</span><h2>Things you'll actually do</h2></div>
+      <p>The activities travelers rate highest.</p>
+    </div>
+    <div class="grid grid-3">
+      
+      <div class="feature reveal" style="background:var(--blue-light);padding:28px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff">🥾</div>
+        <h3>Trekking & Hiking</h3><p>From Arang Kel meadows to Nanga Parbat Base Camp.</p>
+      </div>
+      <div class="feature reveal" style="background:var(--blue-light);padding:28px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff">🚙</div>
+        <h3>Jeep Safaris</h3><p>Deosai's plains and the Babusar high pass.</p>
+      </div>
+      <div class="feature reveal" style="background:var(--blue-light);padding:28px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff">🏕</div>
+        <h3>Camping</h3><p>Riverside tents under Kumrat's pine canopy.</p>
+      </div>
+      <div class="feature reveal" style="background:var(--blue-light);padding:28px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff">🤿</div>
+        <h3>Snorkeling & Diving</h3><p>House reefs across the Maldives and Bali.</p>
+      </div>
+      <div class="feature reveal" style="background:var(--blue-light);padding:28px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff">📸</div>
+        <h3>Photography Tours</h3><p>Golden-hour departures timed for the shot.</p>
+      </div>
+      <div class="feature reveal" style="background:var(--blue-light);padding:28px;border-radius:var(--radius-lg)">
+        <div class="feature-icon" style="background:#fff">🛶</div>
+        <h3>Lake Kayaking</h3><p>Attabad's turquoise water and Shangrila's lagoon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Photo Gallery</span><h2>A small taste of the archive</h2></div>
+      <p>Real photos, real places.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      
+      <a href="gallery.html" class="gallery-item tall">
+        <img src="assets/images/hunza-hero.jpg" alt="Destination photo" loading="lazy">
+        <div class="gallery-overlay"><span>View gallery →</span></div>
+      </a>
+      <a href="gallery.html" class="gallery-item ">
+        <img src="assets/images/maldives-hero.jpg" alt="Destination photo" loading="lazy">
+        <div class="gallery-overlay"><span>View gallery →</span></div>
+      </a>
+      <a href="gallery.html" class="gallery-item wide">
+        <img src="assets/images/istanbul-hero.jpg" alt="Destination photo" loading="lazy">
+        <div class="gallery-overlay"><span>View gallery →</span></div>
+      </a>
+      <a href="gallery.html" class="gallery-item ">
+        <img src="assets/images/bali-1.jpg" alt="Destination photo" loading="lazy">
+        <div class="gallery-overlay"><span>View gallery →</span></div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:44px">
+      <a href="gallery.html" class="btn btn-ghost">Open Full Gallery →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Traveler Stories</span><h2>What the last group said</h2></div>
+      <p>Real trips, real itineraries, unedited.</p>
+    </div>
+    <div class="grid grid-2">
+      
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Every jeep, guesthouse and permit was sorted before we even landed in Gilgit. Attabad Lake at golden hour alone was worth the trip."</p>
+        <div class="testi-person">
+          <img class="testi-avatar" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2250%22%20fill%3D%22%235B8DEF%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2258%22%20font-family%3D%22Plus%20Jakarta%20Sans%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3EFN%3C/text%3E%3C/svg%3E" alt="Fatima N.">
+          <div><div class="testi-name">Fatima N.</div><div class="testi-loc">Lahore, on the Hunza 5-Day</div></div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Twelve days, three valleys, zero logistics headaches. Our driver knew every viewpoint that wasn't in the guidebooks."</p>
+        <div class="testi-person">
+          <img class="testi-avatar" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2250%22%20fill%3D%22%236FA3E0%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2258%22%20font-family%3D%22Plus%20Jakarta%20Sans%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3EHS%3C/text%3E%3C/svg%3E" alt="Hamza S.">
+          <div><div class="testi-name">Hamza S.</div><div class="testi-loc">Karachi, on the Northern Pakistan Grand Tour</div></div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"The overwater villa transfer timing, the sandbank picnic, the little touches — it felt like a resort concierge, not a travel agency."</p>
+        <div class="testi-person">
+          <img class="testi-avatar" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2250%22%20fill%3D%22%235B8DEF%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2258%22%20font-family%3D%22Plus%20Jakarta%20Sans%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3EMA%3C/text%3E%3C/svg%3E" alt="Mariam & Omar">
+          <div><div class="testi-name">Mariam & Omar</div><div class="testi-loc">Islamabad, on the Maldives Honeymoon</div></div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Perfect weekend pace. Mahodand Lake in the morning, back in Kalam for dinner by the river. Would book again in a heartbeat."</p>
+        <div class="testi-person">
+          <img class="testi-avatar" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2250%22%20fill%3D%22%235B8DEF%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2258%22%20font-family%3D%22Plus%20Jakarta%20Sans%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3EZA%3C/text%3E%3C/svg%3E" alt="Zainab A.">
+          <div><div class="testi-name">Zainab A.</div><div class="testi-loc">Peshawar, on Swat & Kalam</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Travel Tips</span><h2>Before you pack your bag</h2></div>
+    </div>
+    <div class="grid grid-3">
+      
+      <div class="feature reveal">
+        <div class="feature-icon">💡</div>
+        <h3>Pack layers, not bulk</h3><p>Valleys swing 15°C between sunrise and noon.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">💡</div>
+        <h3>Book Deosai & Khunjerab early</h3><p>Both routes are seasonal and permit-limited.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">💡</div>
+        <h3>Carry cash past Gilgit</h3><p>Card machines thin out fast beyond the main towns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container" style="max-width:860px">
+    <div class="section-head reveal" style="display:block">
+      <span class="eyebrow">FAQ</span><h2>Good to know before you book</h2>
+    </div>
+    <div class="faq-list reveal">
+      
+      <div class="faq-item">
+        <div class="faq-q"><span>How far in advance should I book a tour?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>For domestic trips (Hunza, Skardu, Naran, Swat) 2–3 weeks ahead is usually enough outside peak July–August weekends. International packages and the Maldives are best booked 6–8 weeks out for the best rates and villa availability.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Are flights included in the package price?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Domestic northern-area tours include all ground transport but not airfare to Islamabad. International packages (Dubai, Istanbul, Maldives, Malaysia, Bali, Thailand) list international airfare as excluded — we can quote it separately on request.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What's the best time to visit Hunza or Skardu?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Late April through October, with June–August being peak season for weather and road access. Khunjerab Pass and Deosai Plains are only open roughly June to September.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can I customize a tour itinerary?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes — every package on this site is a starting template. Tell us your dates, group size and must-see stops and we'll adjust the itinerary, hotel tier or duration accordingly.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What's your cancellation policy?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Full refund up to 14 days before departure, 50% refund between 7–14 days, and travel credit (valid 12 months) for cancellations inside 7 days, except where third-party hotels or permits carry their own non-refundable terms.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="newsletter reveal">
+      <div>
+        <h2>Get new routes before they're announced</h2>
+        <p>One email a month — new itineraries and off-season fares.</p>
+      </div>
+      <form class="newsletter-form" data-demo-form>
+        <input type="email" placeholder="you@email.com" required>
+        <button type="submit" class="btn btn-gold">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>

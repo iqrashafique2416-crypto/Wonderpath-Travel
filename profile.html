@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Settings · WanderPath</title>
+<meta name="description" content="Manage your WanderPath account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0" data-protected="true">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="dash-shell">
+  <div class="container dash-header">
+    <h1>Profile Settings</h1>
+    <p>Update your details or change your password.</p>
+  </div>
+
+  <div class="container dash-grid">
+    <nav class="dash-nav">
+      <a href="dashboard.html">Overview</a>
+      <a href="dashboard.html#bookings">My Bookings</a>
+      <a href="dashboard.html#favorites">Favorite Destinations</a>
+      <a href="dashboard.html#saved">Saved Tours</a>
+      <a href="profile.html" class="active">Profile Settings</a>
+      <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+      <button class="logout-btn" data-logout>Logout</button>
+    </nav>
+
+    <div>
+      <div class="dash-card">
+        <h2>Account Details</h2>
+        <p class="card-sub">Your name and email as shown across WanderPath.</p>
+        <div class="form-alert error" id="profile-error"></div>
+        <div class="form-alert success" id="profile-success"></div>
+        <form id="profile-form">
+          <div class="field-row">
+            <label for="p-name">Full Name</label>
+            <input id="p-name" type="text" required>
+          </div>
+          <div class="field-row">
+            <label for="p-email">Email Address</label>
+            <input id="p-email" type="email" required>
+          </div>
+          <button type="submit" class="btn btn-navy" id="profile-submit">Save Changes</button>
+        </form>
+      </div>
+
+      <div class="dash-card">
+        <h2>Change Password</h2>
+        <p class="card-sub">Choose a strong password you don't use elsewhere.</p>
+        <div class="form-alert error" id="password-error"></div>
+        <div class="form-alert success" id="password-success"></div>
+        <form id="password-form">
+          <div class="field-row">
+            <label for="p-current">Current Password</label>
+            <input id="p-current" type="password" required>
+          </div>
+          <div class="field-row">
+            <label for="p-new">New Password</label>
+            <input id="p-new" type="password" required>
+            <p class="password-hint">At least 8 characters, including one letter and one number.</p>
+          </div>
+          <div class="field-row">
+            <label for="p-confirm">Confirm New Password</label>
+            <input id="p-confirm" type="password" required>
+          </div>
+          <button type="submit" class="btn btn-ghost" id="password-submit">Change Password</button>
+        </form>
+      </div>
+
+      <div class="dash-card">
+        <h2>Account Info</h2>
+        <div class="info-list">
+          <div class="item"><span class="k">Account Created</span><span class="v" id="info-created">—</span></div>
+          <div class="item"><span class="k">Last Login</span><span class="v" id="info-last-login">—</span></div>
+          <div class="item"><span class="k">Last Login Status</span><span class="v" id="info-last-status">—</span></div>
+          <div class="item"><span class="k">Role</span><span class="v" id="info-role">—</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>
+
+<script>
+document.addEventListener('wp-auth-ready', (e) => {
+  const user = e.detail.user;
+  if (!user) return;
+  document.getElementById('p-name').value = user.name;
+  document.getElementById('p-email').value = user.email;
+  document.getElementById('info-created').textContent = new Date(user.createdAt).toLocaleString();
+  document.getElementById('info-last-login').textContent = user.lastLoginAt ? new Date(user.lastLoginAt).toLocaleString() : 'This is your first login';
+  document.getElementById('info-last-status').textContent = user.lastLoginStatus || '—';
+  document.getElementById('info-role').textContent = user.role === 'admin' ? 'Administrator' : 'User';
+});
+
+document.getElementById('profile-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const errBox = document.getElementById('profile-error');
+  const okBox = document.getElementById('profile-success');
+  errBox.classList.remove('show'); okBox.classList.remove('show');
+  const btn = document.getElementById('profile-submit');
+  const original = btn.textContent;
+  btn.disabled = true; btn.textContent = 'Saving...';
+  try {
+    await WP_AUTH.api('/auth/profile', {
+      method: 'PUT',
+      body: { name: document.getElementById('p-name').value, email: document.getElementById('p-email').value },
+    });
+    okBox.textContent = 'Profile updated successfully.';
+    okBox.classList.add('show');
+    await WP_AUTH.refresh();
+  } catch (err) {
+    errBox.textContent = err.message;
+    errBox.classList.add('show');
+  } finally {
+    btn.disabled = false; btn.textContent = original;
+  }
+});
+
+document.getElementById('password-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const errBox = document.getElementById('password-error');
+  const okBox = document.getElementById('password-success');
+  errBox.classList.remove('show'); okBox.classList.remove('show');
+  const btn = document.getElementById('password-submit');
+  const original = btn.textContent;
+  btn.disabled = true; btn.textContent = 'Updating...';
+  try {
+    await WP_AUTH.api('/auth/change-password', {
+      method: 'PUT',
+      body: {
+        currentPassword: document.getElementById('p-current').value,
+        newPassword: document.getElementById('p-new').value,
+        confirmNewPassword: document.getElementById('p-confirm').value,
+      },
+    });
+    okBox.textContent = 'Password changed successfully.';
+    okBox.classList.add('show');
+    document.getElementById('password-form').reset();
+  } catch (err) {
+    errBox.textContent = err.message;
+    errBox.classList.add('show');
+  } finally {
+    btn.disabled = false; btn.textContent = original;
+  }
+});
+</script>

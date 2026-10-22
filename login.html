@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login · WanderPath</title>
+<meta name="description" content="Log in to your WanderPath account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="auth-shell">
+  <div class="auth-visual">
+    <div class="hero-bg" style="background-image:url('assets/images/hunza-hero.jpg'); background-position:center"></div>
+    <div class="hero-scrim"></div>
+    <div class="auth-visual-content">
+      <span class="brand"><span class="brand-mark">W</span>WanderPath</span>
+      <h2>Welcome back to the road.</h2>
+      <p>Log in to view your bookings, saved tours and favorite destinations.</p>
+    </div>
+  </div>
+
+  <div class="auth-form-side">
+    <div class="auth-form-card">
+      <span class="eyebrow">Account</span>
+      <h1>Log in</h1>
+      <p class="sub">New here? <a href="register.html" class="auth-link-inline">Create an account</a> instead.</p>
+
+      <div class="gate-banner" id="auth-redirect-banner" style="display:none">🔒 <span></span></div>
+      <div class="form-alert error" id="login-error"></div>
+
+      <form id="login-form">
+        <div class="field-row">
+          <label for="login-email">Email</label>
+          <input id="login-email" name="email" type="email" placeholder="you@email.com" required>
+        </div>
+        <div class="field-row">
+          <label for="login-password">Password</label>
+          <div class="password-field">
+            <input id="login-password" name="password" type="password" placeholder="••••••••" required>
+            <button type="button" class="password-toggle" data-toggle-for="login-password">SHOW</button>
+          </div>
+        </div>
+        <div class="auth-row-split">
+          <label class="auth-checkbox"><input type="checkbox" id="login-remember"> Remember me</label>
+          <a href="forgot-password.html" class="auth-link-inline">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block" id="login-submit">Log In</button>
+      </form>
+
+      <p class="auth-form-footer">By continuing you agree to WanderPath's Terms &amp; Privacy Policy.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>
+
+<script>
+document.querySelectorAll('.password-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const input = document.getElementById(btn.dataset.toggleFor);
+    const show = input.type === 'password';
+    input.type = show ? 'text' : 'password';
+    btn.textContent = show ? 'HIDE' : 'SHOW';
+  });
+});
+
+const params = new URLSearchParams(window.location.search);
+const redirectTo = params.get('redirect');
+
+document.getElementById('login-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const errBox = document.getElementById('login-error');
+  errBox.classList.remove('show');
+  const btn = document.getElementById('login-submit');
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Logging in...';
+
+  try {
+    const body = {
+      email: document.getElementById('login-email').value,
+      password: document.getElementById('login-password').value,
+      rememberMe: document.getElementById('login-remember').checked,
+    };
+    const res = await fetch('api/auth/login', {
+      method: 'POST', credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Email or password is incorrect.');
+
+    window.location.href = redirectTo && redirectTo.startsWith('/') ? redirectTo.replace(/^\//, '') : 'dashboard.html';
+  } catch (err) {
+    errBox.textContent = err.message;
+    errBox.classList.add('show');
+    btn.disabled = false;
+    btn.textContent = original;
+  }
+});
+</script>

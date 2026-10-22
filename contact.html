@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · WanderPath</title>
+<meta name="description" content="Get in touch with WanderPath.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="active">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-bg" style="background-image:url('assets/images/murree-hero.jpg'); background-position:center"></div>
+  <div class="hero-scrim"></div>
+  <div class="page-hero-content container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+    <h1>Contact Us</h1>
+    <p class="hero-sub">Questions about a route, a date, or a custom itinerary — we usually reply within a few hours.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 style="font-size:30px;margin-bottom:24px">Send us a message</h2>
+        <form data-demo-form>
+          <div class="grid grid-2" style="gap:16px">
+            <div class="field-row"><label for="c-name">Full Name</label><input id="c-name" type="text" placeholder="Your name" required></div>
+            <div class="field-row"><label for="c-email">Email</label><input id="c-email" type="email" placeholder="you@email.com" required></div>
+          </div>
+          <div class="grid grid-2" style="gap:16px">
+            <div class="field-row"><label for="c-phone">Phone</label><input id="c-phone" type="tel" placeholder="+92 3XX XXXXXXX"></div>
+            <div class="field-row"><label for="c-subject">Interested In</label>
+              <select id="c-subject">
+                <option>General Enquiry</option><option>Custom Itinerary</option><option>Existing Booking</option><option>Group / Corporate Trip</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row"><label for="c-msg">Message</label><textarea id="c-msg" rows="5" placeholder="Tell us where you're thinking of going..." required></textarea></div>
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <span class="eyebrow">Reach Us Directly</span>
+        <h2 style="font-size:30px;margin-bottom:10px">Office &amp; Contact Info</h2>
+        <div class="contact-info-card">
+          <div class="ic">📍</div>
+          <div><strong>Office</strong><p style="color:var(--ink-soft);margin-top:4px">2nd Floor, Al-Rehman Plaza, Blue Area, Islamabad, Pakistan</p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="ic">📞</div>
+          <div><strong>Phone</strong><p style="color:var(--ink-soft);margin-top:4px">+92 300 1234567 (WhatsApp available)</p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="ic">✉</div>
+          <div><strong>Email</strong><p style="color:var(--ink-soft);margin-top:4px">hello@wanderpath.travel</p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="ic">🕐</div>
+          <div><strong>Hours</strong><p style="color:var(--ink-soft);margin-top:4px">Mon – Sat, 10:00 AM – 7:00 PM (PKT)</p></div>
+        </div>
+
+        <div class="map-frame" style="margin-top:24px">
+          <iframe
+            title="WanderPath office location map"
+            width="100%" height="100%" style="border:0" loading="lazy"
+            src="https://www.google.com/maps?q=Blue+Area,+Islamabad,+Pakistan&output=embed">
+          </iframe>
+        </div>
+
+        <div class="footer-social" style="margin-top:22px">
+          <a href="#" aria-label="Instagram" style="border-color:var(--line);color:var(--ink)">IG</a>
+          <a href="#" aria-label="Facebook" style="border-color:var(--line);color:var(--ink)">FB</a>
+          <a href="#" aria-label="WhatsApp" style="border-color:var(--line);color:var(--ink)">WA</a>
+          <a href="#" aria-label="YouTube" style="border-color:var(--line);color:var(--ink)">YT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container" style="max-width:860px">
+    <div class="section-head reveal" style="display:block">
+      <span class="eyebrow">FAQ</span><h2>Common questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      
+      <div class="faq-item">
+        <div class="faq-q"><span>How far in advance should I book a tour?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>For domestic trips (Hunza, Skardu, Naran, Swat) 2–3 weeks ahead is usually enough outside peak July–August weekends. International packages and the Maldives are best booked 6–8 weeks out for the best rates and villa availability.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Are flights included in the package price?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Domestic northern-area tours include all ground transport but not airfare to Islamabad. International packages (Dubai, Istanbul, Maldives, Malaysia, Bali, Thailand) list international airfare as excluded — we can quote it separately on request.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What's the best time to visit Hunza or Skardu?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Late April through October, with June–August being peak season for weather and road access. Khunjerab Pass and Deosai Plains are only open roughly June to September.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can I customize a tour itinerary?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes — every package on this site is a starting template. Tell us your dates, group size and must-see stops and we'll adjust the itinerary, hotel tier or duration accordingly.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What's your cancellation policy?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Full refund up to 14 days before departure, 50% refund between 7–14 days, and travel credit (valid 12 months) for cancellations inside 7 days, except where third-party hotels or permits carry their own non-refundable terms.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>

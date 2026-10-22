@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery · WanderPath</title>
+<meta name="description" content="Travel photos across mountains, beaches, cities, hotels, adventure, culture, food and landscapes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="active">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-bg" style="background-image:url('assets/images/maldives-hero.jpg'); background-position:center"></div>
+  <div class="hero-scrim"></div>
+  <div class="page-hero-content container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Gallery</span></div>
+    <h1>Gallery</h1>
+    <p class="hero-sub">Click any photo for a closer look.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="chip-row reveal" style="justify-content:center">
+      <a href="#mountains" class="chip" style="cursor:pointer">Mountains</a><a href="#beaches" class="chip" style="cursor:pointer">Beaches</a><a href="#cities" class="chip" style="cursor:pointer">Cities</a><a href="#hotels" class="chip" style="cursor:pointer">Hotels & Stays</a><a href="#adventure" class="chip" style="cursor:pointer">Adventure</a><a href="#culture" class="chip" style="cursor:pointer">Culture</a><a href="#food" class="chip" style="cursor:pointer">Food</a><a href="#landscapes" class="chip" style="cursor:pointer">Landscapes</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mountains" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Mountains</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/hunza-hero.jpg" alt="Mountains photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item tall" data-lightbox>
+        <img src="assets/images/tour-fairy-meadows-trek-hero.jpg" alt="Mountains photo 2" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/swat-hero.jpg" alt="Mountains photo 3" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/neelum-kashmir-hero.jpg" alt="Mountains photo 4" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="beaches" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Beaches</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/maldives-hero.jpg" alt="Beaches photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item tall" data-lightbox>
+        <img src="assets/images/bali-1.jpg" alt="Beaches photo 2" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/tour-thailand-beach-culture-1.jpg" alt="Beaches photo 3" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/tour-malaysia-city-islands-hero.jpg" alt="Beaches photo 4" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cities" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Cities</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/dubai-hero.jpg" alt="Cities photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item tall" data-lightbox>
+        <img src="assets/images/istanbul-hero.jpg" alt="Cities photo 2" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/dubai-1.jpg" alt="Cities photo 3" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/istanbul-2.jpg" alt="Cities photo 4" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="hotels" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Hotels & Stays</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/skardu-5.jpg" alt="Hotels photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item tall" data-lightbox>
+        <img src="assets/images/skardu-11.jpg" alt="Hotels photo 2" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/maldives-1.jpg" alt="Hotels photo 3" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/skardu-6.jpg" alt="Hotels photo 4" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="adventure" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Adventure</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/tour-hunza-5-day-adventure-hero.jpg" alt="Adventure photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item tall" data-lightbox>
+        <img src="assets/images/tour-fairy-meadows-trek-1.jpg" alt="Adventure photo 2" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/tour-kumrat-forest-camping-1.jpg" alt="Adventure photo 3" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/tour-naran-kaghan-jeep-safari-1.jpg" alt="Adventure photo 4" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="culture" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Culture</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/exp-cultural.jpg" alt="Culture photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item tall" data-lightbox>
+        <img src="assets/images/tour-istanbul-heritage-tour-1.jpg" alt="Culture photo 2" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/istanbul-3.jpg" alt="Culture photo 3" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/hunza-2.jpg" alt="Culture photo 4" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="food" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Food</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/exp-food.jpg" alt="Food photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="landscapes" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:28px">
+      <div><h2 style="font-size:26px">Landscapes</h2></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/swat-1.jpg" alt="Landscapes photo 1" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item tall" data-lightbox>
+        <img src="assets/images/neelum-kashmir-1.jpg" alt="Landscapes photo 2" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item wide" data-lightbox>
+        <img src="assets/images/murree-hero.jpg" alt="Landscapes photo 3" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+      <a href="#" class="gallery-item " data-lightbox>
+        <img src="assets/images/naran-1.jpg" alt="Landscapes photo 4" loading="lazy">
+        <div class="gallery-overlay"><span>View &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight section-navy">
+  <div class="container" style="text-align:center">
+    <h2 class="reveal" style="color:#fff;font-size:clamp(24px,3vw,34px)">Seen enough? Let's plan your trip.</h2>
+    <div class="reveal" style="margin-top:22px"><a href="tours.html" class="btn btn-gold">Browse Tour Packages</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>

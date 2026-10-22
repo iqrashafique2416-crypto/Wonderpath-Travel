@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiences · WanderPath</title>
+<meta name="description" content="Seven kinds of trips.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="active">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-bg" style="background-image:url('assets/images/banner-experiences.jpg'); background-position:center"></div>
+  <div class="hero-scrim"></div>
+  <div class="page-hero-content container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Experiences</span></div>
+    <h1>Experiences</h1>
+    <p class="hero-sub">Seven ways to travel.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="chip-row reveal" style="justify-content:center">
+      <a href="#mountain" class="chip" style="cursor:pointer">🏔Mountain Adventures</a><a href="#camping" class="chip" style="cursor:pointer">🏕Camping</a><a href="#hiking" class="chip" style="cursor:pointer">🥾 Hiking & Trekking</a><a href="#beach" class="chip" style="cursor:pointer">🏖Beach Trips</a><a href="#cultural" class="chip" style="cursor:pointer">🏛Cultural Tours</a><a href="#food" class="chip" style="cursor:pointer">🍴 Food Experiences</a><a href="#photography" class="chip" style="cursor:pointer">📸 Photography Trips</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="mountain">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:56px">
+      <div class="exp-photo reveal"><img src="assets/images/exp-mountain.jpg" alt="Mountain Adventures" loading="lazy"></div><div class="reveal">
+        <span style="font-size:38px">🏔</span>
+        <h2 style="font-size:30px;margin:14px 0 16px">Mountain Adventures</h2>
+        <p style="color:var(--ink-soft);font-size:16px;line-height:1.8">Jeep safaris across 4,000m plateaus, base-camp treks and passes that touch the clouds — for travelers who want the Karakoram and Himalaya up close.</p>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <a href="tours/hunza-5-day-adventure.html" class="card-link" style="color:var(--ink)">→ Hunza Valley 5-Day Adventure</a><a href="tours/skardu-lakes-forts.html" class="card-link" style="color:var(--ink)">→ Skardu Lakes & Forts</a><a href="tours/fairy-meadows-trek.html" class="card-link" style="color:var(--ink)">→ Fairy Meadows Trek</a><a href="tours/northern-pakistan-grand-tour.html" class="card-link" style="color:var(--ink)">→ Northern Pakistan Grand Tour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section " id="camping">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:56px">
+      <div class="reveal">
+        <span style="font-size:38px">🏕</span>
+        <h2 style="font-size:30px;margin:14px 0 16px">Camping</h2>
+        <p style="color:var(--ink-soft);font-size:16px;line-height:1.8">Riverside tents, forest fire pits and star-heavy skies — our camping trips trade hotel rooms for pine-scented mornings.</p>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <a href="tours/kumrat-forest-camping.html" class="card-link" style="color:var(--ink)">→ Kumrat Forest Camping</a><a href="tours/fairy-meadows-trek.html" class="card-link" style="color:var(--ink)">→ Fairy Meadows Trek</a>
+        </div>
+      </div><div class="exp-photo reveal"><img src="assets/images/exp-camping.jpg" alt="Camping" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="hiking">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:56px">
+      <div class="exp-photo reveal"><img src="assets/images/exp-hiking.jpg" alt="Hiking &amp; Trekking" loading="lazy"></div><div class="reveal">
+        <span style="font-size:38px">🥾</span>
+        <h2 style="font-size:30px;margin:14px 0 16px">Hiking & Trekking</h2>
+        <p style="color:var(--ink-soft);font-size:16px;line-height:1.8">From a gentle meadow walk at Arang Kel to the multi-hour push toward Nanga Parbat Base Camp — trails graded for every fitness level.</p>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <a href="tours/fairy-meadows-trek.html" class="card-link" style="color:var(--ink)">→ Fairy Meadows Trek</a><a href="tours/kumrat-forest-camping.html" class="card-link" style="color:var(--ink)">→ Kumrat Forest Camping</a><a href="tours/neelum-valley-explorer.html" class="card-link" style="color:var(--ink)">→ Neelum Valley Explorer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section " id="beach">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:56px">
+      <div class="reveal">
+        <span style="font-size:38px">🏖</span>
+        <h2 style="font-size:30px;margin:14px 0 16px">Beach Trips</h2>
+        <p style="color:var(--ink-soft);font-size:16px;line-height:1.8">Overwater villas in the Maldives, surf breaks in Bali and island-hopping longtails in Thailand — warm-water escapes for every season.</p>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <a href="tours/maldives-honeymoon-escape.html" class="card-link" style="color:var(--ink)">→ Maldives Honeymoon Escape</a><a href="tours/bali-island-retreat.html" class="card-link" style="color:var(--ink)">→ Bali Island Retreat</a><a href="tours/thailand-beach-culture.html" class="card-link" style="color:var(--ink)">→ Thailand Beach & Culture</a>
+        </div>
+      </div><div class="exp-photo reveal"><img src="assets/images/exp-beach.jpg" alt="Beach Trips" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="cultural">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:56px">
+      <div class="exp-photo reveal"><img src="assets/images/exp-cultural.jpg" alt="Cultural Tours" loading="lazy"></div><div class="reveal">
+        <span style="font-size:38px">🏛</span>
+        <h2 style="font-size:30px;margin:14px 0 16px">Cultural Tours</h2>
+        <p style="color:var(--ink-soft);font-size:16px;line-height:1.8">Ottoman domes, 700-year-old forts and living bazaars — trips built around the history that shaped each destination.</p>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <a href="tours/istanbul-heritage-tour.html" class="card-link" style="color:var(--ink)">→ Istanbul Heritage Tour</a><a href="tours/neelum-valley-explorer.html" class="card-link" style="color:var(--ink)">→ Neelum Valley Explorer</a><a href="tours/skardu-lakes-forts.html" class="card-link" style="color:var(--ink)">→ Skardu Lakes & Forts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section " id="food">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:56px">
+      <div class="reveal">
+        <span style="font-size:38px">🍴</span>
+        <h2 style="font-size:30px;margin:14px 0 16px">Food Experiences</h2>
+        <p style="color:var(--ink-soft);font-size:16px;line-height:1.8">Night-market crawls in Penang, Bosphorus-side seafood in Istanbul and trout fresh from Kunhar River streams.</p>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <a href="tours/malaysia-city-islands.html" class="card-link" style="color:var(--ink)">→ Malaysia City & Islands</a><a href="tours/istanbul-heritage-tour.html" class="card-link" style="color:var(--ink)">→ Istanbul Heritage Tour</a><a href="tours/naran-kaghan-jeep-safari.html" class="card-link" style="color:var(--ink)">→ Naran Kaghan Jeep Safari</a>
+        </div>
+      </div><div class="exp-photo reveal"><img src="assets/images/exp-food.jpg" alt="Food Experiences" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="photography">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:56px">
+      <div class="exp-photo reveal"><img src="assets/images/hunza-3.jpg" alt="Photography Trips" loading="lazy"></div><div class="reveal">
+        <span style="font-size:38px">📸</span>
+        <h2 style="font-size:30px;margin:14px 0 16px">Photography Trips</h2>
+        <p style="color:var(--ink-soft);font-size:16px;line-height:1.8">Sunrise slots at Eagle's Nest, the Rupal Face at golden hour, Deosai's wildflower plains — itineraries timed for the shot, not just the sight.</p>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <a href="tours/hunza-5-day-adventure.html" class="card-link" style="color:var(--ink)">→ Hunza Valley 5-Day Adventure</a><a href="tours/fairy-meadows-trek.html" class="card-link" style="color:var(--ink)">→ Fairy Meadows Trek</a><a href="tours/skardu-lakes-forts.html" class="card-link" style="color:var(--ink)">→ Skardu Lakes & Forts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight section-navy">
+  <div class="container" style="text-align:center">
+    <h2 class="reveal" style="color:#fff;font-size:clamp(24px,3vw,34px)">Not sure which experience fits?</h2>
+    <div class="reveal" style="margin-top:26px"><a href="contact.html" class="btn btn-gold">Talk to a Trip Planner</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>

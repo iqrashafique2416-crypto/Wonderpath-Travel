@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations · WanderPath</title>
+<meta name="description" content="14 hand-picked destinations across Pakistan's northern valleys and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/auth.css">
+<link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body data-depth="0">
+
+<header class="navbar is-solid">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" class="">Home</a>
+<a href="destinations.html" data-page="destinations.html" class="active">Destinations</a>
+<a href="tours.html" data-page="tours.html" class="">Tours</a>
+<a href="experiences.html" data-page="experiences.html" class="">Experiences</a>
+<a href="gallery.html" data-page="gallery.html" class="">Gallery</a>
+<a href="about.html" data-page="about.html" class="">About</a>
+<a href="contact.html" data-page="contact.html" class="">Contact</a>
+      <div class="mobile-auth-block" data-auth="guest">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="mobile-auth-block" data-auth="user" style="display:none">
+        <div class="mobile-user-summary"></div>
+        <a href="dashboard.html">My Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+        <button class="logout-btn" data-logout>Logout</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="auth-slot">
+        <a href="login.html" class="auth-link" data-auth="guest">Login</a>
+        <a href="register.html" class="btn btn-ghost btn-sm" data-auth="guest">Register</a>
+        <div class="user-menu" data-auth="user" style="display:none">
+          <button class="user-menu-btn" type="button">
+            <span class="user-menu-avatar">U</span>
+            <span class="user-menu-name">Account</span>
+            <span class="user-menu-caret">▾</span>
+          </button>
+          <div class="user-menu-dropdown">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="profile.html">Profile Settings</a>
+            <a href="admin.html" data-auth="admin" style="display:none">Admin Panel</a>
+            <div class="divider"></div>
+            <button class="logout-btn" data-logout>Logout</button>
+          </div>
+        </div>
+      </div>
+      <a href="tours.html" class="btn btn-gold btn-sm"><span class="long">Book Your Trip</span><span class="short">Book</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-bg" style="background-image:url('assets/images/hunza-hero.jpg'); background-position:center"></div>
+  <div class="hero-scrim"></div>
+  <div class="page-hero-content container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Destinations</span></div>
+    <h1>Destinations</h1>
+    <p class="hero-sub">Fourteen places, one common thread: worth building a whole itinerary around.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">14 Destinations</span><h2>Pick a place to start</h2></div>
+      <p>Tap any card for the full guide.</p>
+    </div>
+    <div class="grid grid-3">
+      
+<a href="destinations/hunza.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/hunza-hero.jpg" alt="Hunza Valley" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Gilgit-Baltistan</span>
+    <h3 class="card-title">Hunza Valley</h3>
+    <p class="card-desc">Where the Karakoram touches the sky</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 45,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/skardu.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/skardu-16.jpg" alt="Skardu" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Gilgit-Baltistan</span>
+    <h3 class="card-title">Skardu</h3>
+    <p class="card-desc">Base camp for the roof of the world</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 52,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/swat.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/swat-hero.jpg" alt="Swat Valley" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Khyber Pakhtunkhwa</span>
+    <h3 class="card-title">Swat Valley</h3>
+    <p class="card-desc">Switzerland of the East</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 32,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/murree.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/murree-hero.jpg" alt="Murree" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.4</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Punjab</span>
+    <h3 class="card-title">Murree</h3>
+    <p class="card-desc">The capital's favourite hill station</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 18,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/naran.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/naran-1.jpg" alt="Naran Kaghan" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Khyber Pakhtunkhwa</span>
+    <h3 class="card-title">Naran Kaghan</h3>
+    <p class="card-desc">Lake Saif-ul-Malook country</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 38,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/neelum-kashmir.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/neelum-kashmir-hero.jpg" alt="Neelum Valley" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Azad Kashmir</span>
+    <h3 class="card-title">Neelum Valley</h3>
+    <p class="card-desc">Pakistan's most emerald valley</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 36,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/fairy-meadows.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/tour-fairy-meadows-trek-hero.jpg" alt="Fairy Meadows" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Gilgit-Baltistan</span>
+    <h3 class="card-title">Fairy Meadows</h3>
+    <p class="card-desc">Nanga Parbat's front lawn</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 42,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/kumrat.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/tour-kumrat-forest-camping-2.jpg" alt="Kumrat Valley" loading="lazy">
+    <span class="card-badge">Pakistan</span>
+    <span class="card-rating">★ 4.6</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Khyber Pakhtunkhwa</span>
+    <h3 class="card-title">Kumrat Valley</h3>
+    <p class="card-desc">Untouched forest wilderness</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 34,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/dubai.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/dubai-hero.jpg" alt="Dubai" loading="lazy">
+    <span class="card-badge">UAE</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Middle East</span>
+    <h3 class="card-title">Dubai</h3>
+    <p class="card-desc">Desert skyline, endless ambition</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 110,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/istanbul.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/istanbul-hero.jpg" alt="Istanbul" loading="lazy">
+    <span class="card-badge">Turkey</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Marmara</span>
+    <h3 class="card-title">Istanbul</h3>
+    <p class="card-desc">Two continents, one skyline</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 125,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/maldives.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/maldives-hero.jpg" alt="Maldives" loading="lazy">
+    <span class="card-badge">Maldives</span>
+    <span class="card-rating">★ 4.9</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Indian Ocean</span>
+    <h3 class="card-title">Maldives</h3>
+    <p class="card-desc">Overwater villas, reef-blue water</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 280,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/malaysia.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/tour-malaysia-city-islands-hero.jpg" alt="Malaysia" loading="lazy">
+    <span class="card-badge">Malaysia</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Southeast Asia</span>
+    <h3 class="card-title">Malaysia</h3>
+    <p class="card-desc">Twin towers to rainforest canopy</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 145,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/bali.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/tour-bali-island-retreat-1.jpg" alt="Bali" loading="lazy">
+    <span class="card-badge">Indonesia</span>
+    <span class="card-rating">★ 4.8</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Southeast Asia</span>
+    <h3 class="card-title">Bali</h3>
+    <p class="card-desc">Rice terraces to reef breaks</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 155,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+<a href="destinations/thailand.html" class="card reveal">
+  <div class="card-media">
+    <img src="assets/images/tour-thailand-beach-culture-2.jpg" alt="Thailand" loading="lazy">
+    <span class="card-badge">Thailand</span>
+    <span class="card-rating">★ 4.7</span>
+  </div>
+  <div class="card-body">
+    <span class="card-loc">Southeast Asia</span>
+    <h3 class="card-title">Thailand</h3>
+    <p class="card-desc">Temples, islands, night markets</p>
+    <div class="card-meta">
+      <div class="card-price"><div class="num">PKR 135,000</div><div class="lbl">from / person</div></div>
+      <span class="card-link">Explore <span class="arrow">→</span></span>
+    </div>
+  </div>
+</a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-tight section-sand">
+  <div class="container" style="text-align:center">
+    <h2 class="reveal" style="font-size:clamp(24px,3vw,34px)">Don't see your dream destination?</h2>
+    <p class="reveal" style="color:var(--ink-soft);margin-top:12px;max-width:520px;margin-left:auto;margin-right:auto">We build fully custom itineraries too.</p>
+    <div class="reveal" style="margin-top:26px"><a href="contact.html" class="btn btn-navy">Request a Custom Trip</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span>WanderPath</a>
+        <p class="desc">We plan the north's best jeep tracks and the world's best beaches — full-service trips across Pakistan and beyond, handled end to end.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tour Packages</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+92 300 1234567</li>
+          <li>hello@wanderpath.travel</li>
+          <li>Blue Area, Islamabad, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderPath Travel &amp; Tours. All rights reserved.</span>
+      <span>Designed for wandering minds.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/enhance.js"></script>
+
+</body>
+</html>
