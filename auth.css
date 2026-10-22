@@ -1,0 +1,184 @@
+/* ============================================================
+   WANDERPATH — Authentication UI
+   Extends assets/style.css. Uses the same design tokens
+   (--blue, --blue-light, --purple, --ink, --line, --radius-*)
+   so auth pages feel native to the rest of the site.
+   ============================================================ */
+
+/* ---------- Navbar auth slot ---------- */
+.auth-slot{ display:flex; align-items:center; gap:14px; }
+.auth-slot a.auth-link{
+  font-size:14.5px; font-weight:600; color:rgba(255,255,255,.9); transition:color .25s ease;
+}
+.navbar.is-scrolled .auth-slot a.auth-link, .navbar.is-solid .auth-slot a.auth-link{ color:var(--ink-soft); }
+.auth-slot a.auth-link:hover{ color:#fff; }
+.navbar.is-scrolled .auth-slot a.auth-link:hover, .navbar.is-solid .auth-slot a.auth-link:hover{ color:var(--blue-deep); }
+
+.user-menu{ position:relative !important; display:inline-flex; }
+.user-menu-btn{
+  display:flex; align-items:center; gap:9px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28);
+  padding:6px 14px 6px 6px; border-radius:999px; color:#fff; font-weight:600; font-size:13.5px;
+  transition:background .25s ease, border-color .25s ease, transform .2s ease;
+}
+.user-menu-btn:hover{ transform:translateY(-2px); }
+.navbar.is-scrolled .user-menu-btn, .navbar.is-solid .user-menu-btn{ background:var(--blue-light); border-color:var(--blue-light); color:var(--ink); }
+.user-menu-avatar{
+  width:28px; height:28px; border-radius:50%; background:var(--blue); color:#fff; display:flex; align-items:center;
+  justify-content:center; font-size:12px; font-weight:800; flex:none;
+}
+.user-menu-caret{ font-size:10px; opacity:.7; transition:transform .25s ease; }
+.user-menu.open .user-menu-caret{ transform:rotate(180deg); }
+
+.user-menu-dropdown{
+  position:absolute; top:calc(100% + 12px); right:0; background:#fff; border-radius:16px; box-shadow:var(--shadow-2);
+  border:1px solid var(--line); min-width:220px; padding:10px; display:none; flex-direction:column; gap:2px; z-index:1200;
+}
+.user-menu.open .user-menu-dropdown{ display:flex; }
+.user-menu-dropdown a, .user-menu-dropdown button{
+  display:flex; align-items:center; gap:10px; padding:11px 12px; border-radius:10px; font-size:14px; font-weight:600;
+  color:var(--ink); transition:background .2s ease, color .2s ease; text-align:left; background:none; border:none; width:100%;
+  font-family:inherit; cursor:pointer; white-space:nowrap; box-sizing:border-box;
+}
+.user-menu-dropdown a:hover, .user-menu-dropdown button:hover{ background:var(--blue-light); color:var(--blue-deep); }
+.user-menu-dropdown .divider{ height:1px; background:var(--line); margin:6px 4px; }
+.user-menu-dropdown .logout-btn{ color:#C24545 !important; }
+.user-menu-dropdown .logout-btn:hover{ background:#FCEBEB !important; color:#C24545 !important; }
+
+/* Mobile-only auth block: hidden everywhere by default so it can never
+   duplicate the desktop auth-slot; only unhidden inside the mobile
+   nav-links dropdown at narrow widths. High-specificity + !important on
+   both sides so no other rule can accidentally leave both visible at once. */
+.nav-links .mobile-auth-block{ display:none !important; margin-top:10px; padding-top:14px; border-top:1px solid var(--line); flex-direction:column; gap:4px; }
+
+@media (max-width:980px){
+  .nav-right .user-menu{ display:none !important; } /* full auth block shown inside the mobile nav-links panel instead */
+  .nav-right .auth-slot > a.auth-link{ display:none !important; }
+  .nav-links.open .mobile-auth-block,
+  .nav-links .mobile-auth-block{ display:flex !important; }
+}
+@media (min-width:981px){
+  .nav-links .mobile-auth-block{ display:none !important; }
+}
+
+.mobile-auth-block a, .mobile-auth-block button{
+  padding:14px 10px; font-size:14.5px; font-weight:600; color:var(--ink); border-radius:0; text-align:left;
+  background:none; border:none; width:100%; font-family:inherit; cursor:pointer; display:block;
+}
+.mobile-auth-block .mobile-user-summary{ font-size:13px; color:var(--ink-soft); font-weight:500; padding:6px 10px 2px; }
+.mobile-auth-block .logout-btn{ color:#C24545; }
+
+/* ---------- Auth pages (login / register) ---------- */
+.auth-shell{
+  min-height:100vh; display:grid; grid-template-columns:1fr 1fr; background:var(--white);
+}
+@media (max-width:900px){ .auth-shell{ grid-template-columns:1fr; } }
+.auth-visual{
+  position:relative; background:var(--ink); overflow:hidden; display:flex; align-items:flex-end; padding:56px;
+}
+.auth-visual .hero-bg{ position:absolute; inset:0; background-size:cover; background-position:center; }
+.auth-visual .hero-scrim{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(32,42,68,.35) 0%, rgba(20,26,45,.88) 100%); }
+.auth-visual-content{ position:relative; z-index:2; color:#fff; }
+.auth-visual-content .brand{ color:#fff; font-size:22px; margin-bottom:28px; display:inline-flex; }
+.auth-visual-content h2{ color:#fff; font-size:clamp(26px,3vw,36px); line-height:1.15; max-width:420px; }
+.auth-visual-content p{ color:rgba(255,255,255,.75); margin-top:14px; max-width:380px; line-height:1.6; }
+@media (max-width:900px){ .auth-visual{ min-height:220px; padding:32px; } }
+
+.auth-form-side{ display:flex; align-items:center; justify-content:center; padding:56px 32px; }
+.auth-form-card{ width:100%; max-width:420px; }
+.auth-form-card .eyebrow{ margin-bottom:10px; }
+.auth-form-card h1{ font-size:30px; margin-bottom:8px; }
+.auth-form-card .sub{ color:var(--ink-soft); font-size:15px; margin-bottom:32px; }
+.auth-form-card form{ display:flex; flex-direction:column; gap:18px; }
+.auth-row-split{ display:flex; justify-content:space-between; align-items:center; font-size:13.5px; }
+.auth-checkbox{ display:flex; align-items:center; gap:8px; color:var(--ink-soft); font-weight:500; }
+.auth-checkbox input{ width:16px; height:16px; accent-color:var(--blue); }
+.auth-link-inline{ color:var(--blue-deep); font-weight:700; }
+.auth-link-inline:hover{ text-decoration:underline; }
+.auth-form-footer{ text-align:center; margin-top:26px; font-size:14.5px; color:var(--ink-soft); }
+.password-field{ position:relative; }
+.password-toggle{
+  position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer;
+  font-size:12.5px; font-weight:700; color:var(--blue-deep); padding:4px 6px;
+}
+.password-hint{ font-size:12.5px; color:var(--ink-soft); margin-top:-6px; }
+
+.form-alert{
+  padding:13px 16px; border-radius:var(--radius-sm); font-size:14px; font-weight:600; display:none; align-items:center; gap:10px;
+}
+.form-alert.show{ display:flex; }
+.form-alert.error{ background:#FCEBEB; color:#B23A3A; }
+.form-alert.success{ background:#E7F6EC; color:#2E7D46; }
+
+/* ---------- Dashboard / Profile / Admin shell ---------- */
+.dash-shell{ padding-top:var(--nav-h); min-height:100vh; background:linear-gradient(180deg, var(--blue-light) 0%, #fff 320px); }
+.dash-header{ padding:48px 0 32px; }
+.dash-header h1{ font-size:clamp(26px,3vw,36px); }
+.dash-header p{ color:var(--ink-soft); margin-top:8px; }
+.dash-grid{ display:grid; grid-template-columns:260px 1fr; gap:36px; align-items:start; padding-bottom:80px; }
+@media (max-width:860px){ .dash-grid{ grid-template-columns:1fr; } }
+
+.dash-nav{ background:#fff; border:1px solid var(--line); border-radius:var(--radius-lg); padding:14px; box-shadow:var(--shadow-1); position:sticky; top:100px; }
+.dash-nav a, .dash-nav .logout-btn{
+  display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:12px; font-size:14.5px; font-weight:600; color:var(--ink-soft);
+  transition:background .2s ease, color .2s ease; text-align:left; background:none; border:none; width:100%; font-family:inherit;
+  cursor:pointer; box-sizing:border-box;
+}
+.dash-nav a:hover, .dash-nav .logout-btn:hover{ background:var(--blue-light); color:var(--blue-deep); }
+.dash-nav a.active{ background:var(--blue); color:#fff; }
+.dash-nav .logout-btn{ color:#C24545 !important; margin-top:6px; border-top:1px solid var(--line); border-radius:0 0 12px 12px; padding-top:16px; }
+.dash-nav .logout-btn:hover{ background:#FCEBEB !important; color:#C24545 !important; }
+
+.dash-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius-lg); padding:30px; box-shadow:var(--shadow-1); margin-bottom:26px; transition:box-shadow .3s ease; }
+.dash-card:hover{ box-shadow:var(--shadow-2); }
+.dash-card h2{ font-size:20px; margin-bottom:6px; }
+.dash-card .card-sub{ color:var(--ink-soft); font-size:14px; margin-bottom:20px; }
+
+.dash-welcome{
+  background:linear-gradient(120deg, var(--ink) 0%, var(--blue-deep) 130%); border-radius:var(--radius-lg); padding:34px;
+  color:#fff; margin-bottom:26px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;
+}
+.dash-welcome h2{ color:#fff; font-size:24px; }
+.dash-welcome p{ color:rgba(255,255,255,.75); margin-top:6px; }
+
+.stat-mini-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:26px; }
+@media (max-width:760px){ .stat-mini-grid{ grid-template-columns:repeat(2,1fr); } }
+.stat-mini{ background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); padding:20px; transition:transform .25s ease, box-shadow .25s ease; }
+.stat-mini:hover{ transform:translateY(-4px); box-shadow:var(--shadow-1); }
+.stat-mini .num{ font-family:var(--font-display); font-size:26px; color:var(--ink); }
+.stat-mini .lbl{ font-size:12.5px; color:var(--ink-soft); margin-top:4px; }
+
+.data-table{ width:100%; border-collapse:collapse; font-size:14px; }
+.data-table th{ text-align:left; padding:10px 12px; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); border-bottom:1px solid var(--line); }
+.data-table td{ padding:13px 12px; border-bottom:1px solid var(--line); color:var(--ink); }
+.data-table tr:hover td{ background:var(--blue-light); }
+.badge{ display:inline-flex; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:700; }
+.badge.success{ background:#E7F6EC; color:#2E7D46; }
+.badge.failed{ background:#FCEBEB; color:#B23A3A; }
+.badge.blocked{ background:#FDF1E3; color:#B26A1E; }
+.badge.admin{ background:var(--purple); color:var(--purple-deep); }
+.badge.user{ background:var(--blue-light); color:var(--blue-deep); }
+.badge.active{ background:#E7F6EC; color:#2E7D46; }
+.badge.disabled{ background:#F1F2F5; color:var(--ink-soft); }
+
+.empty-state{ text-align:center; padding:50px 20px; color:var(--ink-soft); }
+.empty-state .ic{ font-size:40px; margin-bottom:14px; }
+
+.item-row{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; border-bottom:1px solid var(--line); }
+.item-row:last-child{ border-bottom:none; }
+.item-row .title{ font-weight:700; font-size:15px; color:var(--ink); }
+.item-row .meta{ font-size:13px; color:var(--ink-soft); margin-top:2px; }
+.item-row .actions{ display:flex; gap:8px; flex:none; }
+
+.toast{
+  position:fixed; top:90px; right:24px; background:var(--ink); color:#fff; padding:14px 20px; border-radius:12px;
+  font-size:14px; font-weight:600; box-shadow:var(--shadow-2); z-index:3000; opacity:0; transform:translateY(-10px);
+  transition:opacity .3s ease, transform .3s ease; pointer-events:none; max-width:320px;
+}
+.toast.show{ opacity:1; transform:translateY(0); }
+.toast.error{ background:#B23A3A; }
+.toast.success{ background:#2E7D46; }
+
+.gate-banner{
+  background:var(--blue-light); color:var(--blue-deep); border-radius:var(--radius-md); padding:16px 20px; font-size:14.5px;
+  font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:20px;
+}
